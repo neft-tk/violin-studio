@@ -1,4 +1,6 @@
+import React, { useEffect, useState, useCallback } from 'react';
 import "./style.css";
+import API from "./utils/API";
 import Nav from "./components/Nav";
 import {
   BrowserRouter as Router,
@@ -7,6 +9,7 @@ import {
 } from 'react-router-dom';
 import Career from "./components/pages/Career";
 import Home from "./components/Home";
+import Contact from "./components/pages/Contact";
 
 
 function App() {
@@ -19,6 +22,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/home" element={<Home/>}/>
         <Route path="/career" element={<Career/>}/>
+        <Route path="/contact" element={<Contact/>}/>
       </Routes>
 
       </Router>
