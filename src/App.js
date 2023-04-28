@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./style.css";
 import API from "./utils/API";
 import Nav from "./components/Nav";
@@ -17,10 +17,17 @@ function App() {
 
   const [isValidLogin, setIsValidLogin] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userId, setUserId] = useState(0)
+  // const [userId, setUserId] = useState(0)
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
-  const [token, setToken] = useState('');
+  // const [token, setToken] = useState('');
+
+
+  useEffect(() => {
+    console.log("useEffect worked!");
+    
+  }, [isLoggedIn])
+
 
   const handleLogin = (userObj) => {
     console.log(userObj);
@@ -50,8 +57,8 @@ function App() {
   const handleLogout = () => {
     localStorage.removeItem('token');
     setIsLoggedIn(false);
-    setUserId(0);
-    setToken('');
+    // setUserId(0);
+    // setToken('');
     setUserName('');
     setUserEmail('');
   }
