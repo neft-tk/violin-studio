@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React from 'react';
 import "./style.css";
-import API from "./utils/API";
+// import API from "./utils/API";
 import Nav from "./components/Nav";
 import {
   BrowserRouter as Router,
@@ -10,6 +10,7 @@ import {
 import Career from "./components/pages/Career";
 import Home from "./components/Home";
 import Contact from "./components/pages/Contact";
+import Login from './components/pages/Login';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/home" element={<Home/>}/>
+        <Route path="/login" element={<Login/>}/>
         <Route path="/career" element={<Career/>}/>
         <Route path="/contact" element={<Contact/>}/>
       </Routes>
