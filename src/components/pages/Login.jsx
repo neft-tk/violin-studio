@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Login({ handleLogin, isValidLogin }) {
+export default function Login({ handleLogin, isValidLogin, isLoggedIn }) {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
@@ -20,13 +20,23 @@ export default function Login({ handleLogin, isValidLogin }) {
       email: loginEmail.toLowerCase(),
       password: loginPassword,
     });
-    console.log("log in works!");
-    
   };
+
+  const renderRoutes = () => {
+    return (
+      <>
+      <div>
+          <h1>renderRoutes worked</h1>
+        </div></>
+    )
+  }
 
   return (
     <>
-      <h1>Login</h1>
+    <div>
+      {isLoggedIn ? (
+        renderRoutes()
+      ) : (
       <div>
         <form onSubmit={handleLoginSubmit}>
           <input
@@ -48,6 +58,8 @@ export default function Login({ handleLogin, isValidLogin }) {
           </button>
         </form>
       </div>
+      )}
+    </div>
     </>
   );
 }

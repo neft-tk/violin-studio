@@ -23,35 +23,48 @@ function App() {
   const [token, setToken] = useState('');
 
   const handleLogin = (userObj) => {
+    console.log(userObj);
+    
     API.login(userObj).then((data) => {
-
+      
       if (data.msg === 'invalid login credentials') {
         setIsValidLogin(false);
       }
 
-      if (data.token) {
+      else 
+      // (data.token) 
+      {
         setIsValidLogin(true);
-        setUserId(data.user.id);
-        setToken(data.token);
+        // setUserId(data.user.id);
+        // setToken(data.token);
         setIsLoggedIn(true);
         setUserName(data.user.name)
         setUserEmail(data.user.email);
-        localStorage.setItem('token', data.token);
+        // localStorage.setItem('token', data.token);
       }
       
-      console.log("log in worked!");
+      console.log(isLoggedIn);
     });
+  }
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    setIsLoggedIn(false);
+    setUserId(0);
+    setToken('');
+    setUserName('');
+    setUserEmail('');
   }
 
   return (
     <>
     
     <Router>
-      <Nav/>
+      <Nav handleLogout={handleLogout} isLoggedIn={isLoggedIn}/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/home" element={<Home/>}/>
-        <Route path="/login" element={<Login handleLogin={handleLogin} isValidLogin={isValidLogin}/>}/>
+        <Route path="/login" element={<Login handleLogin={handleLogin} isValidLogin={isValidLogin} isLoggedIn={isLoggedIn}/>}/>
         <Route path="/career" element={<Career/>}/>
         <Route path="/contact" element={<Contact/>}/>
       </Routes>
