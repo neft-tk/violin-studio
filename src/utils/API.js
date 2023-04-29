@@ -30,6 +30,16 @@ const API = {
         });
         return await res.json();
     },
+    // get a single note from the database
+    getSingleUser: async (userId) => {
+        const res = await fetch(`${URL_PREFIX}/api/users/${userId}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+        return await res.json();
+    },
 }
 
 export default API;

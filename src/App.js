@@ -21,12 +21,18 @@ function App() {
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [token, setToken] = useState('');
+  const [userNotes, setUserNotes] = useState([]);
 
 
   useEffect(() => {
-    console.log("useEffect worked!");
-    console.log(userEmail);
-    
+   
+    async function fetchNotes() {
+      const data = await API.getSingleUser(userId);
+      setUserNotes(data.Notes)
+    }
+
+    fetchNotes();
+
   }, [isLoggedIn])
 
 
@@ -47,7 +53,6 @@ function App() {
         setUserName(data.user.name)
         setUserEmail(data.user.email);
         localStorage.setItem('token', data.token);
-        console.log(isLoggedIn);
       }
       
     });
@@ -70,7 +75,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/home" element={<Home/>}/>
-        <Route path="/login" element={<Login handleLogin={handleLogin} isValidLogin={isValidLogin} isLoggedIn={isLoggedIn}/>}/>
+        <Route path="/login" element={<Login handleLogin={handleLogin} isValidLogin={isValidLogin} isLoggedIn={isLoggedIn} userNotes={userNotes}/>}/>
         <Route path="/career" element={<Career/>}/>
         <Route path="/contact" element={<Contact/>}/>
       </Routes>

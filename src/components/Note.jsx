@@ -1,8 +1,11 @@
 import React from 'react'
 
 //search back end for users with the same email?
-export default function Note() {
+export default function Note({ noteTitle, noteBody }) {
     return (
-      <div>Note</div>
+      <div>
+        <h1>{noteTitle}</h1>
+        <p>{noteBody}</p>
+      </div>
     )
 }

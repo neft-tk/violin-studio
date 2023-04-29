@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import Note from "../Note";
 
-export default function Login({ handleLogin, isValidLogin, isLoggedIn }) {
+export default function Login({ handleLogin, isValidLogin, isLoggedIn, userNotes }) {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
@@ -28,6 +29,14 @@ export default function Login({ handleLogin, isValidLogin, isLoggedIn }) {
       <>
       <div>
           <h1>renderRoutes worked</h1>
+          <div>
+            {userNotes.map((note, index) => (
+              <Note
+                key={index}
+                noteTitle={note.title}
+                noteBody={note.body}/>
+            ))}
+          </div>
         </div></>
     )
   }
