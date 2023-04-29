@@ -17,40 +17,39 @@ function App() {
 
   const [isValidLogin, setIsValidLogin] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // const [userId, setUserId] = useState(0)
+  const [userId, setUserId] = useState(0)
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
-  // const [token, setToken] = useState('');
+  const [token, setToken] = useState('');
 
 
   useEffect(() => {
     console.log("useEffect worked!");
+    console.log(userEmail);
     
   }, [isLoggedIn])
 
 
   const handleLogin = (userObj) => {
-    console.log(userObj);
+
     
     API.login(userObj).then((data) => {
-      
+
       if (data.msg === 'invalid login credentials') {
         setIsValidLogin(false);
       }
 
-      else 
-      // (data.token) 
-      {
+      else if (data.token) {
         setIsValidLogin(true);
-        // setUserId(data.user.id);
-        // setToken(data.token);
+        setUserId(data.user.id);
+        setToken(data.token);
         setIsLoggedIn(true);
         setUserName(data.user.name)
         setUserEmail(data.user.email);
-        // localStorage.setItem('token', data.token);
+        localStorage.setItem('token', data.token);
+        console.log(isLoggedIn);
       }
       
-      console.log(isLoggedIn);
     });
   }
 
