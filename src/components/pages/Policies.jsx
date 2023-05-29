@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Career() {
+export default function Policies() {
     return (
       <>
-      <h1>Career</h1>
+      <h1>Policies</h1>
       </>
     )
 }

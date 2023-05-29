@@ -7,7 +7,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import Career from "./components/pages/Career";
+import Policies from './components/pages/Policies';
 import Home from "./components/Home";
 import Contact from "./components/pages/Contact";
 import Login from './components/pages/Login';
@@ -76,7 +76,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/home" element={<Home/>}/>
         <Route path="/login" element={<Login handleLogin={handleLogin} isValidLogin={isValidLogin} isLoggedIn={isLoggedIn} userNotes={userNotes}/>}/>
-        <Route path="/career" element={<Career/>}/>
+        <Route path="/policies" element={<Policies/>}/>
         <Route path="/contact" element={<Contact/>}/>
       </Routes>
 
