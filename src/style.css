@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+*{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Playfair', serif;
+}
+
+/* html {
     padding-top: 5%;
+} */
+
+p {
+    padding: 10px; 
+}
+
+h1 {
+    font-size: 7vh;
+    font-weight: 500;
+    -webkit-text-stroke: 1.3px;
+    -webkit-text-stroke-color: rgb(66, 66, 66);
+}
+
+h2 { 
+    font-size: x-large;
+}
+
+.recital-bg {
+    background-image: url("./assets/images/recital1.png");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    min-height: 500px;
+    /* background-color: black; */
+    /* background: rgba(76, 175, 80, 0.6); */
 }

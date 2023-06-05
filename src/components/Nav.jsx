@@ -9,7 +9,7 @@ export default function Nav({ handleLogout, isLoggedIn }) {
   
   return (
     <nav class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-      <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <div class="container flex flex-wrap items-center justify-between mx-none">
         <a href="/" class="flex items-center">
           <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
             Cecilia Poellein Buss' Violin Studio
@@ -23,14 +23,14 @@ export default function Nav({ handleLogout, isLoggedIn }) {
             <li>
               <Link to="/">
                 <h1
-                  className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                  className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:text-black md:p-0 dark:text-white"
                   aria-current="page"
                 >
                   Home
                 </h1>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <div>
                 {isLoggedIn ? (
                   <button onClick={onLogoutClick}>
@@ -59,16 +59,16 @@ export default function Nav({ handleLogout, isLoggedIn }) {
                   Policies
                 </h1>
               </Link>
-            </li>
+            </li> */}
             <li>
-              <Link to="/contact">
+              <a href="#contact">
                 <h1
-                  className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                  className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:text-black md:p-0 dark:text-white"
                   aria-current="page"
                 >
                   Contact Me
                 </h1>
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
