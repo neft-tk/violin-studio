@@ -21,7 +21,7 @@ p {
 h1 {
     font-size: 7vh;
     font-weight: 500;
-    -webkit-text-stroke: 1.3px;
+    -webkit-text-stroke: 1.4px;
     -webkit-text-stroke-color: rgb(66, 66, 66);
 }
 
@@ -36,4 +36,20 @@ h2 {
     min-height: 500px;
     /* background-color: black; */
     /* background: rgba(76, 175, 80, 0.6); */
+}
+
+.no-bg {
+    background-image: none;
+}
+
+@media screen and (max-width: 768px) {
+    .recital-bg{
+        background-image: none;
+        min-height: 200px;
+    }
+
+    h1 {
+        font-size: 5vh;
+    }
+    
 }
