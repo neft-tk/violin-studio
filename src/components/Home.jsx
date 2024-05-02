@@ -35,15 +35,14 @@ export default function Home() {
           or playing violin, Cecilia enjoys bike riding, walking, Pilates Classes and
           travelling with her husband, Gerry.
         </p>
-        <div className="mx-4 flex flex-col items-center justify-center" id="contact">
-          <h2 className="mb-5">
+        <div className="mx-4 flex flex-col items-center justify-center">
+          <h2 >
             Interested in taking you or your child's violin skills to the next
             level?
           </h2>
-          <h2 className="mb-5">
-            Contact me for a Consultation! Please send a 2 minute audio
-            recording of a piece, and include one scale.
-          </h2>
+          <p>
+          Please contact me to set up a free trial lesson. You may also submit a video recording of your violin or viola playing. Please include a scale and one minute of an etude or solo piece.
+          </p>
           <h2 className="mb-5">Email: Cmpbuss@comcast.net</h2>
         </div>
       </div>

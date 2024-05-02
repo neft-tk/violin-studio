@@ -61,14 +61,14 @@ export default function Nav({ handleLogout, isLoggedIn }) {
               </Link>
             </li>
             <li>
-              <a href="#contact">
+              <Link to="/contact">
                 <h1
                   className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0"
                   aria-current="page"
                 >
                   Contact Me
                 </h1>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
