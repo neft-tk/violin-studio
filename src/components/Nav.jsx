@@ -23,7 +23,7 @@ export default function Nav({ handleLogout, isLoggedIn }) {
             <li>
               <Link to="/">
                 <h1
-                  className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:text-black md:p-0 dark:text-white"
+                  className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0"
                   aria-current="page"
                 >
                   Home
@@ -49,21 +49,21 @@ export default function Nav({ handleLogout, isLoggedIn }) {
                   </>
                 )}
               </div>
-            </li>
+            </li> */}
             <li>
               <Link to="/policies">
                 <h1
-                  className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                  className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-white md:p-0 dark:text-white"
                   aria-current="page"
                 >
                   Policies
                 </h1>
               </Link>
-            </li> */}
+            </li>
             <li>
               <a href="#contact">
                 <h1
-                  className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:text-black md:p-0 dark:text-white"
+                  className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0"
                   aria-current="page"
                 >
                   Contact Me

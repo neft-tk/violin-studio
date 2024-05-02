@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
     scroll-behavior: smooth;
 }
 
@@ -15,17 +15,22 @@ body {
 } */
 
 p {
-    padding: 10px; 
+    padding: 10px;
 }
 
 h1 {
     font-size: 7vh;
     font-weight: 500;
-    -webkit-text-stroke: 1.4px;
-    -webkit-text-stroke-color: rgb(66, 66, 66);
+    /* -webkit-text-stroke: 1.4px; */
+    /* -webkit-text-stroke-color: rgb(66, 66, 66); */
+    text-shadow: -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    ;
 }
 
-h2 { 
+h2 {
     font-size: x-large;
 }
 
@@ -43,7 +48,7 @@ h2 {
 }
 
 @media screen and (max-width: 768px) {
-    .recital-bg{
+    .recital-bg {
         background-image: none;
         min-height: 200px;
     }
@@ -51,5 +56,5 @@ h2 {
     h1 {
         font-size: 5vh;
     }
-    
+
 }

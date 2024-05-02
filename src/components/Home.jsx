@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <div className="flex flex-col bg-gray-100">
         <div className="mt-8 md:p-16 flex flex-col justify-center md:justify-start text-white recital-bg">
-          <h1 className="flex justify-center">Cecilia Poellein Buss</h1>
+          <h1 className="flex justify-center font-bold">Cecilia Poellein Buss</h1>
           <h1 className="flex text-center justify-center">
             Violinist/Violin and Viola Instructor
           </h1>
