@@ -8,7 +8,7 @@ export default function Policies() {
 
 
         <h1>
-          BUSS STUDIO POLICIES
+          BUSS VIOLIN/VIOLA STUDIO POLICIES
         </h1>
         <h2>
 
@@ -44,7 +44,7 @@ export default function Policies() {
           The 30 lessons are scheduled by Cecilia and the parent/student.
         </p>
         <h2>
-          CANCELLING LESSONS due to illness or schedule conflicts:
+          CANCELLING LESSONS:
         </h2>
         <p>
 
