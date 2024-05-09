@@ -8,18 +8,18 @@ export default function Nav({ handleLogout, isLoggedIn }) {
   }
   
   return (
-    <nav class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-      <div class="container flex flex-wrap items-center justify-between mx-none">
+    <nav class="px-2 sm:px-4 py-2.5 bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 border-gray-600">
+      <div class="flex flex-wrap items-center w-full justify-between mx-none">
         <a href="/" class="flex items-center">
-          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-            Cecilia Poellein Buss' Violin Studio
+          <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
+            Buss Violin/Viola Studio
           </span>
         </a>
         <div
           class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="navbar-sticky"
         >
-          <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul class="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li>
               <Link to="/">
                 <h1
